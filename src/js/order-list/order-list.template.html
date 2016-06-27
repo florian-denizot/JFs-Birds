@@ -1,0 +1,53 @@
+<h1>Order List</h1>
+
+<fieldset>
+  <input type="text" class="form-control" ng-model="$ctrl.search" id="order_search" placeholder="Search">
+</fieldset>
+
+<table class="table" >
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th class="text-right" width="75px">
+        <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#addOrderModal">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    <tr ng-repeat="order in $ctrl.list | filter:$crtl.search">
+      <td>{{order.name}}</td>
+      <td class="text-right">
+        <button class="btn btn-danger btn-xs" ng-click="$ctrl.removeOrder(order.id)" title="Remove the {{order.name}} order">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="modal fade" id="addOrderModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <form class="form-horizontal" ng-submit="$ctrl.addOrder()">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Create a New Order</h4>
+        </div>
+        <div class="modal-body">
+           <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" ng-model="$ctrl.orderName" placeholder="Name">
+            </div>
+          </div> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <input class="btn btn-primary" type="submit" value="Add">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

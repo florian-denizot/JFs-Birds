@@ -1,8 +1,21 @@
 {
   "name": "JFs-Birds",
-  "version": "1.0.0",
+  "description": "An offline app that helps JF to categorize birds",
+  "version": "0.0.1",
   "keywords": ["util", "functional", "server", "client", "browser"],
-  "author": "florian",
+  "repository": "https://github.com/florian-denizot/JFs-Birds"
+  "author": "Florian Denizot",
   "contributors": [],
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "http-server": "^0.9.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.8",
+    "karma-junit-reporter": "^0.4.1",
+    "protractor": "^3.2.2"
+  }
 }
