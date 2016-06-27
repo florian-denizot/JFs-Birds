@@ -1,2 +1,2 @@
-angular.module('birdList', ['ngRoute', 'orderList']);
+angular.module('birdList', ['ngRoute', 'order']);
 
