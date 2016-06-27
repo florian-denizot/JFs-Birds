@@ -1,0 +1,15 @@
+<h1>Bird List</h1>
+<table class="table" >
+  <tr><th>English Name</th><th width="75px"></th></tr>
+  <tr ng-repeat="bird in $ctrl.list">
+    <td>{{bird.englishName}}</td>
+    <td class="text-right"><button class="btn btn-default btn-sm" ng-click="$ctrl.removeBird(bird.id)">Delete</button></td>
+  </tr>
+</table>
+ <form class="form-inline" ng-submit="$ctrl.addBird()">
+  <div class="form-group">
+    <label class="sr-only" for="englishName">English name</label>
+    <input type="text" class="form-control" id="englishName" ng-model="$ctrl.birdEnglishName" size="30" placeholder="English name">
+  </div>  
+  <input class="btn btn-primary" type="submit" value="add">
+</form>

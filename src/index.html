@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="JFsBirdsApp">
+<html lang="en" ng-app="jfsBirdsApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +7,10 @@
     
     <title>JF's Birds</title>
 
+    <link rel="shortcut icon" href="">
+    
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,10 +19,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body ng-controller="BirdsController">
+  <body>
     <nav class="navbar navbar-default">
       <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
+        
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -31,26 +33,44 @@
           <a class="navbar-brand" href="#">JF's Birds</a>
         </div>
         
-         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="main-menu">
           <ul class="nav navbar-nav">
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+            <li><a href="#!/birds">Birds</a></li>
+            <li><a href="#!/orders">Orders</a></li>
+            <li><a href="#!/famillies">Famillies</a></li>
+            <li><a href="#!/behaviors">Behaviors</a></li>
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
+        </div>
+        
+      </div>
     </nav>
+    
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          
+          <div ng-view></div>
         </div>
       </div>
     </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script   src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script   src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- Bootstrap Javascript plugins -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- angularJS -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <!-- angular localForage -->
+    <script src="bower_components/localForage/dist/localForage.min.js"></script>
+    <script src="bower_components/angular-localForage/dist/angular-localForage.min.js"></script>
+    <!-- JF's Birds App files -->
+    <script src="js/app.js"></script>
+    <script src="js/app.config.js"></script>
+    <script src="js/bird-list/bird-list.module.js"></script>
+    <script src="js/bird-list/bird-list.component.js"></script>
+    <script src="js/order-list/order-list.module.js"></script>
+    <script src="js/order-list/order-list.component.js"></script>
   </body>
 </html>

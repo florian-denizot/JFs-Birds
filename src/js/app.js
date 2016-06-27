@@ -1,3 +1,3 @@
-angular.module('jfsBirdsApp', []);
+angular.module('jfsBirdsApp', ['ngRoute', 'birdList', 'orderList']);
 
 
