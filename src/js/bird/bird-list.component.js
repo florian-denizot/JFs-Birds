@@ -1,7 +1,7 @@
 angular.
-  module('birdList').
+  module('bird').
   component('birdList', {
-    templateUrl: 'js/bird-list/bird-list.template.html',
+    templateUrl: 'js/bird/bird-list.template.html',
     controller: function BirdListController() {
       var birdList = this;
       birdList.autoIncrement = 1

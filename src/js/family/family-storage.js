@@ -3,1406 +3,1406 @@ angular.module('family').
     var famillies = [
       {
         "id": 1,
-        "scientificName": "Acanthisittidae",
-        "commonName": "New Zealand Wrens",
+        "name": "Acanthisittidae",
+        "description": "New Zealand Wrens",
         "orderId": 24
       },
       {
         "id": 2,
-        "scientificName": "Acanthizidae",
-        "commonName": "Thornbills and Allies",
+        "name": "Acanthizidae",
+        "description": "Thornbills and Allies",
         "orderId": 24
       },
       {
         "id": 3,
-        "scientificName": "Accipitridae",
-        "commonName": "Hawks, Eagles, and Kites",
+        "name": "Accipitridae",
+        "description": "Hawks, Eagles, and Kites",
         "orderId": 1
       },
       {
         "id": 4,
-        "scientificName": "Acrocephalidae",
-        "commonName": "Reed-Warblers and Allies",
+        "name": "Acrocephalidae",
+        "description": "Reed-Warblers and Allies",
         "orderId": 24
       },
       {
         "id": 5,
-        "scientificName": "Aegithalidae",
-        "commonName": "Long-tailed Tits",
+        "name": "Aegithalidae",
+        "description": "Long-tailed Tits",
         "orderId": 24
       },
       {
         "id": 6,
-        "scientificName": "Aegithinidae",
-        "commonName": "Ioras",
+        "name": "Aegithinidae",
+        "description": "Ioras",
         "orderId": 24
       },
       {
         "id": 7,
-        "scientificName": "Aegothelidae",
-        "commonName": "Owlet-nightjars",
+        "name": "Aegothelidae",
+        "description": "Owlet-nightjars",
         "orderId": 6
       },
       {
         "id": 8,
-        "scientificName": "Alaudidae",
-        "commonName": "Larks",
+        "name": "Alaudidae",
+        "description": "Larks",
         "orderId": 24
       },
       {
         "id": 9,
-        "scientificName": "Alcedinidae",
-        "commonName": "Kingfishers",
+        "name": "Alcedinidae",
+        "description": "Kingfishers",
         "orderId": 13
       },
       {
         "id": 10,
-        "scientificName": "Alcidae",
-        "commonName": "Auks, Murres, and Puffins",
+        "name": "Alcidae",
+        "description": "Auks, Murres, and Puffins",
         "orderId": 9
       },
       {
         "id": 11,
-        "scientificName": "Anatidae",
-        "commonName": "Ducks, Geese, and Waterfowl",
+        "name": "Anatidae",
+        "description": "Ducks, Geese, and Waterfowl",
         "orderId": 2
       },
       {
         "id": 12,
-        "scientificName": "Anhimidae",
-        "commonName": "Screamers",
+        "name": "Anhimidae",
+        "description": "Screamers",
         "orderId": 2
       },
       {
         "id": 13,
-        "scientificName": "Anhingidae",
-        "commonName": "Anhingas",
+        "name": "Anhingidae",
+        "description": "Anhingas",
         "orderId": 37
       },
       {
         "id": 14,
-        "scientificName": "Anseranatidae",
-        "commonName": "Magpie Goose",
+        "name": "Anseranatidae",
+        "description": "Magpie Goose",
         "orderId": 2
       },
       {
         "id": 15,
-        "scientificName": "Apodidae",
-        "commonName": "Swifts",
+        "name": "Apodidae",
+        "description": "Swifts",
         "orderId": 3
       },
       {
         "id": 16,
-        "scientificName": "Apterygidae",
-        "commonName": "Kiwis",
+        "name": "Apterygidae",
+        "description": "Kiwis",
         "orderId": 4
       },
       {
         "id": 17,
-        "scientificName": "Aramidae",
-        "commonName": "Limpkin",
+        "name": "Aramidae",
+        "description": "Limpkin",
         "orderId": 20
       },
       {
         "id": 18,
-        "scientificName": "Ardeidae",
-        "commonName": "Herons, Egrets, and Bitterns",
+        "name": "Ardeidae",
+        "description": "Herons, Egrets, and Bitterns",
         "orderId": 25
       },
       {
         "id": 19,
-        "scientificName": "Artamidae",
-        "commonName": "Woodswallows",
+        "name": "Artamidae",
+        "description": "Woodswallows",
         "orderId": 24
       },
       {
         "id": 20,
-        "scientificName": "Atrichornithidae",
-        "commonName": "Scrub-birds",
+        "name": "Atrichornithidae",
+        "description": "Scrub-birds",
         "orderId": 24
       },
       {
         "id": 21,
-        "scientificName": "Balaenicipitidae",
-        "commonName": "Shoebill",
+        "name": "Balaenicipitidae",
+        "description": "Shoebill",
         "orderId": 25
       },
       {
         "id": 22,
-        "scientificName": "Bernieridae",
-        "commonName": "Malagasy Warblers",
+        "name": "Bernieridae",
+        "description": "Malagasy Warblers",
         "orderId": 24
       },
       {
         "id": 23,
-        "scientificName": "Bombycillidae",
-        "commonName": "Waxwings",
+        "name": "Bombycillidae",
+        "description": "Waxwings",
         "orderId": 24
       },
       {
         "id": 24,
-        "scientificName": "Brachypteraciidae",
-        "commonName": "Ground-Rollers",
+        "name": "Brachypteraciidae",
+        "description": "Ground-Rollers",
         "orderId": 13
       },
       {
         "id": 25,
-        "scientificName": "Bucconidae",
-        "commonName": "Puffbirds",
+        "name": "Bucconidae",
+        "description": "Puffbirds",
         "orderId": 17
       },
       {
         "id": 26,
-        "scientificName": "Bucerotidae",
-        "commonName": "Hornbills",
+        "name": "Bucerotidae",
+        "description": "Hornbills",
         "orderId": 5
       },
       {
         "id": 27,
-        "scientificName": "Bucorvidae",
-        "commonName": "Ground-Hornbills",
+        "name": "Bucorvidae",
+        "description": "Ground-Hornbills",
         "orderId": 5
       },
       {
         "id": 28,
-        "scientificName": "Buphagidae",
-        "commonName": "Oxpeckers",
+        "name": "Buphagidae",
+        "description": "Oxpeckers",
         "orderId": 24
       },
       {
         "id": 29,
-        "scientificName": "Burhinidae",
-        "commonName": "Thick-knees",
+        "name": "Burhinidae",
+        "description": "Thick-knees",
         "orderId": 9
       },
       {
         "id": 30,
-        "scientificName": "Cacatuidae",
-        "commonName": "Cockatoos",
+        "name": "Cacatuidae",
+        "description": "Cockatoos",
         "orderId": 31
       },
       {
         "id": 31,
-        "scientificName": "Calcariidae",
-        "commonName": "Longspurs and Snow Buntings",
+        "name": "Calcariidae",
+        "description": "Longspurs and Snow Buntings",
         "orderId": 24
       },
       {
         "id": 32,
-        "scientificName": "Callaeidae",
-        "commonName": "Wattlebirds",
+        "name": "Callaeidae",
+        "description": "Wattlebirds",
         "orderId": 24
       },
       {
         "id": 33,
-        "scientificName": "Calyptomenidae",
-        "commonName": "African and Green Broadbills",
+        "name": "Calyptomenidae",
+        "description": "African and Green Broadbills",
         "orderId": 24
       },
       {
         "id": 34,
-        "scientificName": "Campephagidae",
-        "commonName": "Cuckooshrikes",
+        "name": "Campephagidae",
+        "description": "Cuckooshrikes",
         "orderId": 24
       },
       {
         "id": 35,
-        "scientificName": "Capitonidae",
-        "commonName": "New World Barbets",
+        "name": "Capitonidae",
+        "description": "New World Barbets",
         "orderId": 28
       },
       {
         "id": 36,
-        "scientificName": "Caprimulgidae",
-        "commonName": "Nightjars and Allies",
+        "name": "Caprimulgidae",
+        "description": "Nightjars and Allies",
         "orderId": 6
       },
       {
         "id": 37,
-        "scientificName": "Cardinalidae",
-        "commonName": "Cardinals and Allies",
+        "name": "Cardinalidae",
+        "description": "Cardinals and Allies",
         "orderId": 24
       },
       {
         "id": 38,
-        "scientificName": "Cariamidae",
-        "commonName": "Seriemas",
+        "name": "Cariamidae",
+        "description": "Seriemas",
         "orderId": 7
       },
       {
         "id": 39,
-        "scientificName": "Casuariidae",
-        "commonName": "Cassowaries",
+        "name": "Casuariidae",
+        "description": "Cassowaries",
         "orderId": 8
       },
       {
         "id": 40,
-        "scientificName": "Cathartidae",
-        "commonName": "New World Vultures",
+        "name": "Cathartidae",
+        "description": "New World Vultures",
         "orderId": 1
       },
       {
         "id": 41,
-        "scientificName": "Certhiidae",
-        "commonName": "Treecreepers",
+        "name": "Certhiidae",
+        "description": "Treecreepers",
         "orderId": 24
       },
       {
         "id": 42,
-        "scientificName": "Cettiidae",
-        "commonName": "Bush-Warblers and Allies",
+        "name": "Cettiidae",
+        "description": "Bush-Warblers and Allies",
         "orderId": 24
       },
       {
         "id": 43,
-        "scientificName": "Chaetopidae",
-        "commonName": "Rockjumpers",
+        "name": "Chaetopidae",
+        "description": "Rockjumpers",
         "orderId": 24
       },
       {
         "id": 44,
-        "scientificName": "Charadriidae",
-        "commonName": "Plovers and Lapwings",
+        "name": "Charadriidae",
+        "description": "Plovers and Lapwings",
         "orderId": 9
       },
       {
         "id": 45,
-        "scientificName": "Chionidae",
-        "commonName": "Sheathbills",
+        "name": "Chionidae",
+        "description": "Sheathbills",
         "orderId": 9
       },
       {
         "id": 46,
-        "scientificName": "Chloropseidae",
-        "commonName": "Leafbirds",
+        "name": "Chloropseidae",
+        "description": "Leafbirds",
         "orderId": 24
       },
       {
         "id": 47,
-        "scientificName": "Ciconiidae",
-        "commonName": "Storks",
+        "name": "Ciconiidae",
+        "description": "Storks",
         "orderId": 10
       },
       {
         "id": 48,
-        "scientificName": "Cinclidae",
-        "commonName": "Dippers",
+        "name": "Cinclidae",
+        "description": "Dippers",
         "orderId": 24
       },
       {
         "id": 49,
-        "scientificName": "Cinclosomatidae",
-        "commonName": "Quail-thrushes and Jewel-babblers",
+        "name": "Cinclosomatidae",
+        "description": "Quail-thrushes and Jewel-babblers",
         "orderId": 24
       },
       {
         "id": 50,
-        "scientificName": "Cisticolidae",
-        "commonName": "Cisticolas and Allies",
+        "name": "Cisticolidae",
+        "description": "Cisticolas and Allies",
         "orderId": 24
       },
       {
         "id": 51,
-        "scientificName": "Climacteridae",
-        "commonName": "Australasian Treecreepers",
+        "name": "Climacteridae",
+        "description": "Australasian Treecreepers",
         "orderId": 24
       },
       {
         "id": 52,
-        "scientificName": "Cnemophilidae",
-        "commonName": "Satinbirds",
+        "name": "Cnemophilidae",
+        "description": "Satinbirds",
         "orderId": 24
       },
       {
         "id": 53,
-        "scientificName": "Coliidae",
-        "commonName": "Mousebirds",
+        "name": "Coliidae",
+        "description": "Mousebirds",
         "orderId": 11
       },
       {
         "id": 54,
-        "scientificName": "Columbidae",
-        "commonName": "Pigeons and Doves",
+        "name": "Columbidae",
+        "description": "Pigeons and Doves",
         "orderId": 12
       },
       {
         "id": 55,
-        "scientificName": "Conopophagidae",
-        "commonName": "Gnateaters",
+        "name": "Conopophagidae",
+        "description": "Gnateaters",
         "orderId": 24
       },
       {
         "id": 56,
-        "scientificName": "Coraciidae",
-        "commonName": "Rollers",
+        "name": "Coraciidae",
+        "description": "Rollers",
         "orderId": 13
       },
       {
         "id": 57,
-        "scientificName": "Corcoracidae",
-        "commonName": "White-winged Chough and Apostlebird",
+        "name": "Corcoracidae",
+        "description": "White-winged Chough and Apostlebird",
         "orderId": 24
       },
       {
         "id": 58,
-        "scientificName": "Corvidae",
-        "commonName": "Crows, Jays, and Magpies",
+        "name": "Corvidae",
+        "description": "Crows, Jays, and Magpies",
         "orderId": 24
       },
       {
         "id": 59,
-        "scientificName": "Cotingidae",
-        "commonName": "Cotingas",
+        "name": "Cotingidae",
+        "description": "Cotingas",
         "orderId": 24
       },
       {
         "id": 60,
-        "scientificName": "Cracidae",
-        "commonName": "Guans, Chachalacas, and Curassows",
+        "name": "Cracidae",
+        "description": "Guans, Chachalacas, and Curassows",
         "orderId": 18
       },
       {
         "id": 61,
-        "scientificName": "Cracticidae",
-        "commonName": "Bellmagpies and Allies",
+        "name": "Cracticidae",
+        "description": "Bellmagpies and Allies",
         "orderId": 24
       },
       {
         "id": 62,
-        "scientificName": "Cuculidae",
-        "commonName": "Cuckoos",
+        "name": "Cuculidae",
+        "description": "Cuckoos",
         "orderId": 14
       },
       {
         "id": 63,
-        "scientificName": "Dasyornithidae",
-        "commonName": "Bristlebirds",
+        "name": "Dasyornithidae",
+        "description": "Bristlebirds",
         "orderId": 24
       },
       {
         "id": 64,
-        "scientificName": "Dicaeidae",
-        "commonName": "Flowerpeckers",
+        "name": "Dicaeidae",
+        "description": "Flowerpeckers",
         "orderId": 24
       },
       {
         "id": 65,
-        "scientificName": "Dicruridae",
-        "commonName": "Drongos",
+        "name": "Dicruridae",
+        "description": "Drongos",
         "orderId": 24
       },
       {
         "id": 66,
-        "scientificName": "Diomedeidae",
-        "commonName": "Albatrosses",
+        "name": "Diomedeidae",
+        "description": "Albatrosses",
         "orderId": 30
       },
       {
         "id": 67,
-        "scientificName": "Donacobiidae",
-        "commonName": "Donacobius",
+        "name": "Donacobiidae",
+        "description": "Donacobius",
         "orderId": 24
       },
       {
         "id": 68,
-        "scientificName": "Dromadidae",
-        "commonName": "Crab Plover",
+        "name": "Dromadidae",
+        "description": "Crab Plover",
         "orderId": 9
       },
       {
         "id": 69,
-        "scientificName": "Dromaiidae",
-        "commonName": "Emu",
+        "name": "Dromaiidae",
+        "description": "Emu",
         "orderId": 8
       },
       {
         "id": 70,
-        "scientificName": "Dulidae",
-        "commonName": "Palmchat",
+        "name": "Dulidae",
+        "description": "Palmchat",
         "orderId": 24
       },
       {
         "id": 71,
-        "scientificName": "Elachuridae",
-        "commonName": "Spotted Elachura",
+        "name": "Elachuridae",
+        "description": "Spotted Elachura",
         "orderId": 24
       },
       {
         "id": 72,
-        "scientificName": "Emberizidae",
-        "commonName": "Buntings and New World Sparrows",
+        "name": "Emberizidae",
+        "description": "Buntings and New World Sparrows",
         "orderId": 24
       },
       {
         "id": 73,
-        "scientificName": "Estrildidae",
-        "commonName": "Waxbills and Allies",
+        "name": "Estrildidae",
+        "description": "Waxbills and Allies",
         "orderId": 24
       },
       {
         "id": 74,
-        "scientificName": "Eupetidae",
-        "commonName": "Rail-babbler",
+        "name": "Eupetidae",
+        "description": "Rail-babbler",
         "orderId": 24
       },
       {
         "id": 75,
-        "scientificName": "Eurylaimidae",
-        "commonName": "Asian and Grauer's Broadbills",
+        "name": "Eurylaimidae",
+        "description": "Asian and Grauer's Broadbills",
         "orderId": 24
       },
       {
         "id": 76,
-        "scientificName": "Eurypygidae",
-        "commonName": "Sunbittern",
+        "name": "Eurypygidae",
+        "description": "Sunbittern",
         "orderId": 15
       },
       {
         "id": 77,
-        "scientificName": "Falconidae",
-        "commonName": "Falcons and Caracaras",
+        "name": "Falconidae",
+        "description": "Falcons and Caracaras",
         "orderId": 16
       },
       {
         "id": 78,
-        "scientificName": "Formicariidae",
-        "commonName": "Antthrushes",
+        "name": "Formicariidae",
+        "description": "Antthrushes",
         "orderId": 24
       },
       {
         "id": 79,
-        "scientificName": "Fregatidae",
-        "commonName": "Frigatebirds",
+        "name": "Fregatidae",
+        "description": "Frigatebirds",
         "orderId": 37
       },
       {
         "id": 80,
-        "scientificName": "Fringillidae",
-        "commonName": "Finches, Euphonias, and Allies",
+        "name": "Fringillidae",
+        "description": "Finches, Euphonias, and Allies",
         "orderId": 24
       },
       {
         "id": 81,
-        "scientificName": "Furnariidae",
-        "commonName": "Ovenbirds and Woodcreepers",
+        "name": "Furnariidae",
+        "description": "Ovenbirds and Woodcreepers",
         "orderId": 24
       },
       {
         "id": 82,
-        "scientificName": "Galbulidae",
-        "commonName": "Jacamars",
+        "name": "Galbulidae",
+        "description": "Jacamars",
         "orderId": 17
       },
       {
         "id": 83,
-        "scientificName": "Gaviidae",
-        "commonName": "Loons",
+        "name": "Gaviidae",
+        "description": "Loons",
         "orderId": 19
       },
       {
         "id": 84,
-        "scientificName": "Glareolidae",
-        "commonName": "Pratincoles and Coursers",
+        "name": "Glareolidae",
+        "description": "Pratincoles and Coursers",
         "orderId": 9
       },
       {
         "id": 85,
-        "scientificName": "Grallariidae",
-        "commonName": "Antpittas",
+        "name": "Grallariidae",
+        "description": "Antpittas",
         "orderId": 24
       },
       {
         "id": 86,
-        "scientificName": "Gruidae",
-        "commonName": "Cranes",
+        "name": "Gruidae",
+        "description": "Cranes",
         "orderId": 20
       },
       {
         "id": 87,
-        "scientificName": "Haematopodidae",
-        "commonName": "Oystercatchers",
+        "name": "Haematopodidae",
+        "description": "Oystercatchers",
         "orderId": 9
       },
       {
         "id": 88,
-        "scientificName": "Heliornithidae",
-        "commonName": "Finfoots",
+        "name": "Heliornithidae",
+        "description": "Finfoots",
         "orderId": 20
       },
       {
         "id": 89,
-        "scientificName": "Hemiprocnidae",
-        "commonName": "Treeswifts",
+        "name": "Hemiprocnidae",
+        "description": "Treeswifts",
         "orderId": 3
       },
       {
         "id": 90,
-        "scientificName": "Hirundinidae",
-        "commonName": "Swallows",
+        "name": "Hirundinidae",
+        "description": "Swallows",
         "orderId": 24
       },
       {
         "id": 91,
-        "scientificName": "Hydrobatidae",
-        "commonName": "Storm-Petrels",
+        "name": "Hydrobatidae",
+        "description": "Storm-Petrels",
         "orderId": 30
       },
       {
         "id": 92,
-        "scientificName": "Hyliotidae",
-        "commonName": "Hyliotas",
+        "name": "Hyliotidae",
+        "description": "Hyliotas",
         "orderId": 24
       },
       {
         "id": 93,
-        "scientificName": "Hylocitreidae",
-        "commonName": "Hylocitrea",
+        "name": "Hylocitreidae",
+        "description": "Hylocitrea",
         "orderId": 24
       },
       {
         "id": 94,
-        "scientificName": "Hypocoliidae",
-        "commonName": "Hypocolius",
+        "name": "Hypocoliidae",
+        "description": "Hypocolius",
         "orderId": 24
       },
       {
         "id": 95,
-        "scientificName": "Ibidorhynchidae",
-        "commonName": "Ibisbill",
+        "name": "Ibidorhynchidae",
+        "description": "Ibisbill",
         "orderId": 9
       },
       {
         "id": 96,
-        "scientificName": "Icteridae",
-        "commonName": "Troupials and Allies",
+        "name": "Icteridae",
+        "description": "Troupials and Allies",
         "orderId": 24
       },
       {
         "id": 97,
-        "scientificName": "Indicatoridae",
-        "commonName": "Honeyguides",
+        "name": "Indicatoridae",
+        "description": "Honeyguides",
         "orderId": 28
       },
       {
         "id": 98,
-        "scientificName": "Irenidae",
-        "commonName": "Fairy-bluebirds",
+        "name": "Irenidae",
+        "description": "Fairy-bluebirds",
         "orderId": 24
       },
       {
         "id": 99,
-        "scientificName": "Jacanidae",
-        "commonName": "Jacanas",
+        "name": "Jacanidae",
+        "description": "Jacanas",
         "orderId": 9
       },
       {
         "id": 100,
-        "scientificName": "Laniidae",
-        "commonName": "Shrikes",
+        "name": "Laniidae",
+        "description": "Shrikes",
         "orderId": 24
       },
       {
         "id": 101,
-        "scientificName": "Laridae",
-        "commonName": "Gulls, Terns, and Skimmers",
+        "name": "Laridae",
+        "description": "Gulls, Terns, and Skimmers",
         "orderId": 9
       },
       {
         "id": 102,
-        "scientificName": "Leiothrichidae",
-        "commonName": "Laughingthrushes and Allies",
+        "name": "Leiothrichidae",
+        "description": "Laughingthrushes and Allies",
         "orderId": 24
       },
       {
         "id": 103,
-        "scientificName": "Leptosomidae",
-        "commonName": "Cuckoo-Roller",
+        "name": "Leptosomidae",
+        "description": "Cuckoo-Roller",
         "orderId": 21
       },
       {
         "id": 104,
-        "scientificName": "Locustellidae",
-        "commonName": "Grassbirds and Allies",
+        "name": "Locustellidae",
+        "description": "Grassbirds and Allies",
         "orderId": 24
       },
       {
         "id": 105,
-        "scientificName": "Lybiidae",
-        "commonName": "African Barbets",
+        "name": "Lybiidae",
+        "description": "African Barbets",
         "orderId": 28
       },
       {
         "id": 106,
-        "scientificName": "Machaerirhynchidae",
-        "commonName": "Boatbills",
+        "name": "Machaerirhynchidae",
+        "description": "Boatbills",
         "orderId": 24
       },
       {
         "id": 107,
-        "scientificName": "Macrosphenidae",
-        "commonName": "African Warblers",
+        "name": "Macrosphenidae",
+        "description": "African Warblers",
         "orderId": 24
       },
       {
         "id": 108,
-        "scientificName": "Malaconotidae",
-        "commonName": "Bushshrikes and Allies",
+        "name": "Malaconotidae",
+        "description": "Bushshrikes and Allies",
         "orderId": 24
       },
       {
         "id": 109,
-        "scientificName": "Maluridae",
-        "commonName": "Fairywrens",
+        "name": "Maluridae",
+        "description": "Fairywrens",
         "orderId": 24
       },
       {
         "id": 110,
-        "scientificName": "Megalaimidae",
-        "commonName": "Asian Barbets",
+        "name": "Megalaimidae",
+        "description": "Asian Barbets",
         "orderId": 28
       },
       {
         "id": 111,
-        "scientificName": "Megapodiidae",
-        "commonName": "Megapodes",
+        "name": "Megapodiidae",
+        "description": "Megapodes",
         "orderId": 18
       },
       {
         "id": 112,
-        "scientificName": "Melanocharitidae",
-        "commonName": "Berrypeckers and Longbills",
+        "name": "Melanocharitidae",
+        "description": "Berrypeckers and Longbills",
         "orderId": 24
       },
       {
         "id": 113,
-        "scientificName": "Melanopareiidae",
-        "commonName": "Crescentchests",
+        "name": "Melanopareiidae",
+        "description": "Crescentchests",
         "orderId": 24
       },
       {
         "id": 114,
-        "scientificName": "Meliphagidae",
-        "commonName": "Honeyeaters",
+        "name": "Meliphagidae",
+        "description": "Honeyeaters",
         "orderId": 24
       },
       {
         "id": 115,
-        "scientificName": "Menuridae",
-        "commonName": "Lyrebirds",
+        "name": "Menuridae",
+        "description": "Lyrebirds",
         "orderId": 24
       },
       {
         "id": 116,
-        "scientificName": "Meropidae",
-        "commonName": "Bee-eaters",
+        "name": "Meropidae",
+        "description": "Bee-eaters",
         "orderId": 13
       },
       {
         "id": 117,
-        "scientificName": "Mesitornithidae",
-        "commonName": "Mesites",
+        "name": "Mesitornithidae",
+        "description": "Mesites",
         "orderId": 22
       },
       {
         "id": 118,
-        "scientificName": "Mimidae",
-        "commonName": "Mockingbirds and Thrashers",
+        "name": "Mimidae",
+        "description": "Mockingbirds and Thrashers",
         "orderId": 24
       },
       {
         "id": 119,
-        "scientificName": "Mohouidae",
-        "commonName": "Whiteheads",
+        "name": "Mohouidae",
+        "description": "Whiteheads",
         "orderId": 24
       },
       {
         "id": 120,
-        "scientificName": "Momotidae",
-        "commonName": "Motmots",
+        "name": "Momotidae",
+        "description": "Motmots",
         "orderId": 13
       },
       {
         "id": 121,
-        "scientificName": "Monarchidae",
-        "commonName": "Monarch Flycatchers",
+        "name": "Monarchidae",
+        "description": "Monarch Flycatchers",
         "orderId": 24
       },
       {
         "id": 122,
-        "scientificName": "Motacillidae",
-        "commonName": "Wagtails and Pipits",
+        "name": "Motacillidae",
+        "description": "Wagtails and Pipits",
         "orderId": 24
       },
       {
         "id": 123,
-        "scientificName": "Muscicapidae",
-        "commonName": "Old World Flycatchers",
+        "name": "Muscicapidae",
+        "description": "Old World Flycatchers",
         "orderId": 24
       },
       {
         "id": 124,
-        "scientificName": "Musophagidae",
-        "commonName": "Turacos",
+        "name": "Musophagidae",
+        "description": "Turacos",
         "orderId": 14
       },
       {
         "id": 125,
-        "scientificName": "Nectariniidae",
-        "commonName": "Sunbirds and Spiderhunters",
+        "name": "Nectariniidae",
+        "description": "Sunbirds and Spiderhunters",
         "orderId": 24
       },
       {
         "id": 126,
-        "scientificName": "Neosittidae",
-        "commonName": "Sittellas",
+        "name": "Neosittidae",
+        "description": "Sittellas",
         "orderId": 24
       },
       {
         "id": 127,
-        "scientificName": "Nicatoridae",
-        "commonName": "Nicators",
+        "name": "Nicatoridae",
+        "description": "Nicators",
         "orderId": 24
       },
       {
         "id": 128,
-        "scientificName": "Notiomystidae",
-        "commonName": "Stitchbird",
+        "name": "Notiomystidae",
+        "description": "Stitchbird",
         "orderId": 24
       },
       {
         "id": 129,
-        "scientificName": "Numididae",
-        "commonName": "Guineafowl",
+        "name": "Numididae",
+        "description": "Guineafowl",
         "orderId": 18
       },
       {
         "id": 130,
-        "scientificName": "Nyctibiidae",
-        "commonName": "Potoos",
+        "name": "Nyctibiidae",
+        "description": "Potoos",
         "orderId": 6
       },
       {
         "id": 131,
-        "scientificName": "Odontophoridae",
-        "commonName": "New World Quail",
+        "name": "Odontophoridae",
+        "description": "New World Quail",
         "orderId": 18
       },
       {
         "id": 132,
-        "scientificName": "Opisthocomidae",
-        "commonName": "Hoatzin",
+        "name": "Opisthocomidae",
+        "description": "Hoatzin",
         "orderId": 14
       },
       {
         "id": 133,
-        "scientificName": "Oreoicidae",
-        "commonName": "Australo-Papuan Bellbirds",
+        "name": "Oreoicidae",
+        "description": "Australo-Papuan Bellbirds",
         "orderId": 24
       },
       {
         "id": 134,
-        "scientificName": "Oriolidae",
-        "commonName": "Old World Orioles",
+        "name": "Oriolidae",
+        "description": "Old World Orioles",
         "orderId": 24
       },
       {
         "id": 135,
-        "scientificName": "Orthonychidae",
-        "commonName": "Logrunners",
+        "name": "Orthonychidae",
+        "description": "Logrunners",
         "orderId": 24
       },
       {
         "id": 136,
-        "scientificName": "Otididae",
-        "commonName": "Bustards",
+        "name": "Otididae",
+        "description": "Bustards",
         "orderId": 23
       },
       {
         "id": 137,
-        "scientificName": "Oxyruncidae",
-        "commonName": "Sharpbill",
+        "name": "Oxyruncidae",
+        "description": "Sharpbill",
         "orderId": 24
       },
       {
         "id": 138,
-        "scientificName": "Pachycephalidae",
-        "commonName": "Whistlers and Allies",
+        "name": "Pachycephalidae",
+        "description": "Whistlers and Allies",
         "orderId": 24
       },
       {
         "id": 139,
-        "scientificName": "Pandionidae",
-        "commonName": "Osprey",
+        "name": "Pandionidae",
+        "description": "Osprey",
         "orderId": 1
       },
       {
         "id": 140,
-        "scientificName": "Panuridae",
-        "commonName": "Bearded Reedling",
+        "name": "Panuridae",
+        "description": "Bearded Reedling",
         "orderId": 24
       },
       {
         "id": 141,
-        "scientificName": "Paradisaeidae",
-        "commonName": "Birds-of-Paradise",
+        "name": "Paradisaeidae",
+        "description": "Birds-of-Paradise",
         "orderId": 24
       },
       {
         "id": 142,
-        "scientificName": "Paradoxornithidae",
-        "commonName": "Parrotbills, Wrentit, and Allies",
+        "name": "Paradoxornithidae",
+        "description": "Parrotbills, Wrentit, and Allies",
         "orderId": 24
       },
       {
         "id": 143,
-        "scientificName": "Paramythiidae",
-        "commonName": "Tit Berrypecker and Crested Berrypecker",
+        "name": "Paramythiidae",
+        "description": "Tit Berrypecker and Crested Berrypecker",
         "orderId": 24
       },
       {
         "id": 144,
-        "scientificName": "Pardalotidae",
-        "commonName": "Pardalotes",
+        "name": "Pardalotidae",
+        "description": "Pardalotes",
         "orderId": 24
       },
       {
         "id": 145,
-        "scientificName": "Paridae",
-        "commonName": "Tits, Chickadees, and Titmice",
+        "name": "Paridae",
+        "description": "Tits, Chickadees, and Titmice",
         "orderId": 24
       },
       {
         "id": 146,
-        "scientificName": "Parulidae",
-        "commonName": "New World Warblers",
+        "name": "Parulidae",
+        "description": "New World Warblers",
         "orderId": 24
       },
       {
         "id": 147,
-        "scientificName": "Passeridae",
-        "commonName": "Old World Sparrows",
+        "name": "Passeridae",
+        "description": "Old World Sparrows",
         "orderId": 24
       },
       {
         "id": 148,
-        "scientificName": "Pedionomidae",
-        "commonName": "Plains-wanderer",
+        "name": "Pedionomidae",
+        "description": "Plains-wanderer",
         "orderId": 9
       },
       {
         "id": 149,
-        "scientificName": "Pelecanidae",
-        "commonName": "Pelicans",
+        "name": "Pelecanidae",
+        "description": "Pelicans",
         "orderId": 25
       },
       {
         "id": 150,
-        "scientificName": "Pelecanoididae",
-        "commonName": "Diving-Petrels",
+        "name": "Pelecanoididae",
+        "description": "Diving-Petrels",
         "orderId": 30
       },
       {
         "id": 151,
-        "scientificName": "Pellorneidae",
-        "commonName": "Ground Babblers and Allies",
+        "name": "Pellorneidae",
+        "description": "Ground Babblers and Allies",
         "orderId": 24
       },
       {
         "id": 152,
-        "scientificName": "Petroicidae",
-        "commonName": "Australasian Robins",
+        "name": "Petroicidae",
+        "description": "Australasian Robins",
         "orderId": 24
       },
       {
         "id": 153,
-        "scientificName": "Peucedramidae",
-        "commonName": "Olive Warbler",
+        "name": "Peucedramidae",
+        "description": "Olive Warbler",
         "orderId": 24
       },
       {
         "id": 154,
-        "scientificName": "Phaethontidae",
-        "commonName": "Tropicbirds",
+        "name": "Phaethontidae",
+        "description": "Tropicbirds",
         "orderId": 26
       },
       {
         "id": 155,
-        "scientificName": "Phalacrocoracidae",
-        "commonName": "Cormorants and Shags",
+        "name": "Phalacrocoracidae",
+        "description": "Cormorants and Shags",
         "orderId": 37
       },
       {
         "id": 156,
-        "scientificName": "Phasianidae",
-        "commonName": "Pheasants, Grouse, and Allies",
+        "name": "Phasianidae",
+        "description": "Pheasants, Grouse, and Allies",
         "orderId": 18
       },
       {
         "id": 157,
-        "scientificName": "Philepittidae",
-        "commonName": "Asities",
+        "name": "Philepittidae",
+        "description": "Asities",
         "orderId": 24
       },
       {
         "id": 158,
-        "scientificName": "Phoenicopteridae",
-        "commonName": "Flamingos",
+        "name": "Phoenicopteridae",
+        "description": "Flamingos",
         "orderId": 27
       },
       {
         "id": 159,
-        "scientificName": "Phoeniculidae",
-        "commonName": "Woodhoopoes and Scimitar-bills",
+        "name": "Phoeniculidae",
+        "description": "Woodhoopoes and Scimitar-bills",
         "orderId": 5
       },
       {
         "id": 160,
-        "scientificName": "Phylloscopidae",
-        "commonName": "Leaf Warblers",
+        "name": "Phylloscopidae",
+        "description": "Leaf Warblers",
         "orderId": 24
       },
       {
         "id": 161,
-        "scientificName": "Picathartidae",
-        "commonName": "Rockfowl",
+        "name": "Picathartidae",
+        "description": "Rockfowl",
         "orderId": 24
       },
       {
         "id": 162,
-        "scientificName": "Picidae",
-        "commonName": "Woodpeckers",
+        "name": "Picidae",
+        "description": "Woodpeckers",
         "orderId": 28
       },
       {
         "id": 163,
-        "scientificName": "Pipridae",
-        "commonName": "Manakins",
+        "name": "Pipridae",
+        "description": "Manakins",
         "orderId": 24
       },
       {
         "id": 164,
-        "scientificName": "Pittidae",
-        "commonName": "Pittas",
+        "name": "Pittidae",
+        "description": "Pittas",
         "orderId": 24
       },
       {
         "id": 165,
-        "scientificName": "Pityriaseidae",
-        "commonName": "Bristlehead",
+        "name": "Pityriaseidae",
+        "description": "Bristlehead",
         "orderId": 24
       },
       {
         "id": 166,
-        "scientificName": "Platysteiridae",
-        "commonName": "Wattle-eyes and Batises",
+        "name": "Platysteiridae",
+        "description": "Wattle-eyes and Batises",
         "orderId": 24
       },
       {
         "id": 167,
-        "scientificName": "Ploceidae",
-        "commonName": "Weavers and Allies",
+        "name": "Ploceidae",
+        "description": "Weavers and Allies",
         "orderId": 24
       },
       {
         "id": 168,
-        "scientificName": "Pluvianellidae",
-        "commonName": "Magellanic Plover",
+        "name": "Pluvianellidae",
+        "description": "Magellanic Plover",
         "orderId": 9
       },
       {
         "id": 169,
-        "scientificName": "Pluvianidae",
-        "commonName": "Egyptian Plover",
+        "name": "Pluvianidae",
+        "description": "Egyptian Plover",
         "orderId": 9
       },
       {
         "id": 170,
-        "scientificName": "Pnoepygidae",
-        "commonName": "Cupwings",
+        "name": "Pnoepygidae",
+        "description": "Cupwings",
         "orderId": 24
       },
       {
         "id": 171,
-        "scientificName": "Podargidae",
-        "commonName": "Frogmouths",
+        "name": "Podargidae",
+        "description": "Frogmouths",
         "orderId": 6
       },
       {
         "id": 172,
-        "scientificName": "Podicipedidae",
-        "commonName": "Grebes",
+        "name": "Podicipedidae",
+        "description": "Grebes",
         "orderId": 29
       },
       {
         "id": 173,
-        "scientificName": "Polioptilidae",
-        "commonName": "Gnatcatchers",
+        "name": "Polioptilidae",
+        "description": "Gnatcatchers",
         "orderId": 24
       },
       {
         "id": 174,
-        "scientificName": "Pomatostomidae",
-        "commonName": "Pseudo-Babblers",
+        "name": "Pomatostomidae",
+        "description": "Pseudo-Babblers",
         "orderId": 24
       },
       {
         "id": 175,
-        "scientificName": "Procellariidae",
-        "commonName": "Shearwaters and Petrels",
+        "name": "Procellariidae",
+        "description": "Shearwaters and Petrels",
         "orderId": 30
       },
       {
         "id": 176,
-        "scientificName": "Promeropidae",
-        "commonName": "Sugarbirds",
+        "name": "Promeropidae",
+        "description": "Sugarbirds",
         "orderId": 24
       },
       {
         "id": 177,
-        "scientificName": "Prunellidae",
-        "commonName": "Accentors",
+        "name": "Prunellidae",
+        "description": "Accentors",
         "orderId": 24
       },
       {
         "id": 178,
-        "scientificName": "Psittacidae",
-        "commonName": "New World and African Parrots",
+        "name": "Psittacidae",
+        "description": "New World and African Parrots",
         "orderId": 31
       },
       {
         "id": 179,
-        "scientificName": "Psittaculidae",
-        "commonName": "Old World Parrots",
+        "name": "Psittaculidae",
+        "description": "Old World Parrots",
         "orderId": 31
       },
       {
         "id": 180,
-        "scientificName": "Psophiidae",
-        "commonName": "Trumpeters",
+        "name": "Psophiidae",
+        "description": "Trumpeters",
         "orderId": 20
       },
       {
         "id": 181,
-        "scientificName": "Psophodidae",
-        "commonName": "Whipbirds and Wedgebills",
+        "name": "Psophodidae",
+        "description": "Whipbirds and Wedgebills",
         "orderId": 24
       },
       {
         "id": 182,
-        "scientificName": "Pteroclidae",
-        "commonName": "Sandgrouse",
+        "name": "Pteroclidae",
+        "description": "Sandgrouse",
         "orderId": 32
       },
       {
         "id": 183,
-        "scientificName": "Ptiliogonatidae",
-        "commonName": "Silky-flycatchers",
+        "name": "Ptiliogonatidae",
+        "description": "Silky-flycatchers",
         "orderId": 24
       },
       {
         "id": 184,
-        "scientificName": "Ptilonorhynchidae",
-        "commonName": "Bowerbirds",
+        "name": "Ptilonorhynchidae",
+        "description": "Bowerbirds",
         "orderId": 24
       },
       {
         "id": 185,
-        "scientificName": "Pycnonotidae",
-        "commonName": "Bulbuls",
+        "name": "Pycnonotidae",
+        "description": "Bulbuls",
         "orderId": 24
       },
       {
         "id": 186,
-        "scientificName": "Rallidae",
-        "commonName": "Rails, Gallinules, and Coots",
+        "name": "Rallidae",
+        "description": "Rails, Gallinules, and Coots",
         "orderId": 20
       },
       {
         "id": 187,
-        "scientificName": "Ramphastidae",
-        "commonName": "Toucans",
+        "name": "Ramphastidae",
+        "description": "Toucans",
         "orderId": 28
       },
       {
         "id": 188,
-        "scientificName": "Recurvirostridae",
-        "commonName": "Stilts and Avocets",
+        "name": "Recurvirostridae",
+        "description": "Stilts and Avocets",
         "orderId": 9
       },
       {
         "id": 189,
-        "scientificName": "Regulidae",
-        "commonName": "Kinglets",
+        "name": "Regulidae",
+        "description": "Kinglets",
         "orderId": 24
       },
       {
         "id": 190,
-        "scientificName": "Remizidae",
-        "commonName": "Penduline-Tits",
+        "name": "Remizidae",
+        "description": "Penduline-Tits",
         "orderId": 24
       },
       {
         "id": 191,
-        "scientificName": "Rheidae",
-        "commonName": "Rheas",
+        "name": "Rheidae",
+        "description": "Rheas",
         "orderId": 33
       },
       {
         "id": 192,
-        "scientificName": "Rhinocryptidae",
-        "commonName": "Tapaculos",
+        "name": "Rhinocryptidae",
+        "description": "Tapaculos",
         "orderId": 24
       },
       {
         "id": 193,
-        "scientificName": "Rhipiduridae",
-        "commonName": "Fantails",
+        "name": "Rhipiduridae",
+        "description": "Fantails",
         "orderId": 24
       },
       {
         "id": 194,
-        "scientificName": "Rhynochetidae",
-        "commonName": "Kagu",
+        "name": "Rhynochetidae",
+        "description": "Kagu",
         "orderId": 15
       },
       {
         "id": 195,
-        "scientificName": "Rostratulidae",
-        "commonName": "Painted-Snipes",
+        "name": "Rostratulidae",
+        "description": "Painted-Snipes",
         "orderId": 9
       },
       {
         "id": 196,
-        "scientificName": "Sagittariidae",
-        "commonName": "Secretary-bird",
+        "name": "Sagittariidae",
+        "description": "Secretary-bird",
         "orderId": 1
       },
       {
         "id": 197,
-        "scientificName": "Sapayoidae",
-        "commonName": "Sapayoa",
+        "name": "Sapayoidae",
+        "description": "Sapayoa",
         "orderId": 24
       },
       {
         "id": 198,
-        "scientificName": "Sarothruridae",
-        "commonName": "Flufftails",
+        "name": "Sarothruridae",
+        "description": "Flufftails",
         "orderId": 20
       },
       {
         "id": 199,
-        "scientificName": "Scolopacidae",
-        "commonName": "Sandpipers and Allies",
+        "name": "Scolopacidae",
+        "description": "Sandpipers and Allies",
         "orderId": 9
       },
       {
         "id": 200,
-        "scientificName": "Scopidae",
-        "commonName": "Hamerkop",
+        "name": "Scopidae",
+        "description": "Hamerkop",
         "orderId": 25
       },
       {
         "id": 201,
-        "scientificName": "Semnornithidae",
-        "commonName": "Toucan-Barbets",
+        "name": "Semnornithidae",
+        "description": "Toucan-Barbets",
         "orderId": 28
       },
       {
         "id": 202,
-        "scientificName": "Sittidae",
-        "commonName": "Nuthatches",
+        "name": "Sittidae",
+        "description": "Nuthatches",
         "orderId": 24
       },
       {
         "id": 203,
-        "scientificName": "Spheniscidae",
-        "commonName": "Penguins",
+        "name": "Spheniscidae",
+        "description": "Penguins",
         "orderId": 34
       },
       {
         "id": 204,
-        "scientificName": "Steatornithidae",
-        "commonName": "Oilbird",
+        "name": "Steatornithidae",
+        "description": "Oilbird",
         "orderId": 6
       },
       {
         "id": 205,
-        "scientificName": "Stenostiridae",
-        "commonName": "Fairy Flycatchers",
+        "name": "Stenostiridae",
+        "description": "Fairy Flycatchers",
         "orderId": 24
       },
       {
         "id": 206,
-        "scientificName": "Stercorariidae",
-        "commonName": "Skuas and Jaegers",
+        "name": "Stercorariidae",
+        "description": "Skuas and Jaegers",
         "orderId": 9
       },
       {
         "id": 207,
-        "scientificName": "Strigidae",
-        "commonName": "Owls",
+        "name": "Strigidae",
+        "description": "Owls",
         "orderId": 35
       },
       {
         "id": 208,
-        "scientificName": "Strigopidae",
-        "commonName": "New Zealand Parrots",
+        "name": "Strigopidae",
+        "description": "New Zealand Parrots",
         "orderId": 31
       },
       {
         "id": 209,
-        "scientificName": "Struthionidae",
-        "commonName": "Ostrich",
+        "name": "Struthionidae",
+        "description": "Ostrich",
         "orderId": 36
       },
       {
         "id": 210,
-        "scientificName": "Sturnidae",
-        "commonName": "Starlings",
+        "name": "Sturnidae",
+        "description": "Starlings",
         "orderId": 24
       },
       {
         "id": 211,
-        "scientificName": "Sulidae",
-        "commonName": "Boobies and Gannets",
+        "name": "Sulidae",
+        "description": "Boobies and Gannets",
         "orderId": 37
       },
       {
         "id": 212,
-        "scientificName": "Sylviidae",
-        "commonName": "Sylviid Warblers",
+        "name": "Sylviidae",
+        "description": "Sylviid Warblers",
         "orderId": 24
       },
       {
         "id": 213,
-        "scientificName": "Thamnophilidae",
-        "commonName": "Typical Antbirds",
+        "name": "Thamnophilidae",
+        "description": "Typical Antbirds",
         "orderId": 24
       },
       {
         "id": 214,
-        "scientificName": "Thinocoridae",
-        "commonName": "Seedsnipes",
+        "name": "Thinocoridae",
+        "description": "Seedsnipes",
         "orderId": 9
       },
       {
         "id": 215,
-        "scientificName": "Thraupidae",
-        "commonName": "Tanagers and Allies",
+        "name": "Thraupidae",
+        "description": "Tanagers and Allies",
         "orderId": 24
       },
       {
         "id": 216,
-        "scientificName": "Threskiornithidae",
-        "commonName": "Ibises and Spoonbills",
+        "name": "Threskiornithidae",
+        "description": "Ibises and Spoonbills",
         "orderId": 25
       },
       {
         "id": 217,
-        "scientificName": "Tichodromidae",
-        "commonName": "Wallcreeper",
+        "name": "Tichodromidae",
+        "description": "Wallcreeper",
         "orderId": 24
       },
       {
         "id": 218,
-        "scientificName": "Timaliidae",
-        "commonName": "Tree-Babblers, Scimitar-Babblers, and Allies",
+        "name": "Timaliidae",
+        "description": "Tree-Babblers, Scimitar-Babblers, and Allies",
         "orderId": 24
       },
       {
         "id": 219,
-        "scientificName": "Tinamidae",
-        "commonName": "Tinamous",
+        "name": "Tinamidae",
+        "description": "Tinamous",
         "orderId": 38
       },
       {
         "id": 220,
-        "scientificName": "Tityridae",
-        "commonName": "Tityras and Allies",
+        "name": "Tityridae",
+        "description": "Tityras and Allies",
         "orderId": 24
       },
       {
         "id": 221,
-        "scientificName": "Todidae",
-        "commonName": "Todies",
+        "name": "Todidae",
+        "description": "Todies",
         "orderId": 13
       },
       {
         "id": 222,
-        "scientificName": "Trochilidae",
-        "commonName": "Hummingbirds",
+        "name": "Trochilidae",
+        "description": "Hummingbirds",
         "orderId": 3
       },
       {
         "id": 223,
-        "scientificName": "Troglodytidae",
-        "commonName": "Wrens",
+        "name": "Troglodytidae",
+        "description": "Wrens",
         "orderId": 24
       },
       {
         "id": 224,
-        "scientificName": "Trogonidae",
-        "commonName": "Trogons",
+        "name": "Trogonidae",
+        "description": "Trogons",
         "orderId": 39
       },
       {
         "id": 225,
-        "scientificName": "Turdidae",
-        "commonName": "Thrushes and Allies",
+        "name": "Turdidae",
+        "description": "Thrushes and Allies",
         "orderId": 24
       },
       {
         "id": 226,
-        "scientificName": "Turnicidae",
-        "commonName": "Buttonquail",
+        "name": "Turnicidae",
+        "description": "Buttonquail",
         "orderId": 9
       },
       {
         "id": 227,
-        "scientificName": "Tyrannidae",
-        "commonName": "Tyrant Flycatchers",
+        "name": "Tyrannidae",
+        "description": "Tyrant Flycatchers",
         "orderId": 24
       },
       {
         "id": 228,
-        "scientificName": "Tytonidae",
-        "commonName": "Barn-Owls",
+        "name": "Tytonidae",
+        "description": "Barn-Owls",
         "orderId": 35
       },
       {
         "id": 229,
-        "scientificName": "Upupidae",
-        "commonName": "Hoopoes",
+        "name": "Upupidae",
+        "description": "Hoopoes",
         "orderId": 5
       },
       {
         "id": 230,
-        "scientificName": "Urocynchramidae",
-        "commonName": "Przevalski's Rosefinch",
+        "name": "Urocynchramidae",
+        "description": "Przevalski's Rosefinch",
         "orderId": 24
       },
       {
         "id": 231,
-        "scientificName": "Vangidae",
-        "commonName": "Vangas, Helmetshrikes, and Allies",
+        "name": "Vangidae",
+        "description": "Vangas, Helmetshrikes, and Allies",
         "orderId": 24
       },
       {
         "id": 232,
-        "scientificName": "Viduidae",
-        "commonName": "Indigobirds",
+        "name": "Viduidae",
+        "description": "Indigobirds",
         "orderId": 24
       },
       {
         "id": 233,
-        "scientificName": "Vireonidae",
-        "commonName": "Vireos, Shrike-Babblers, and Erpornis",
+        "name": "Vireonidae",
+        "description": "Vireos, Shrike-Babblers, and Erpornis",
         "orderId": 24
       },
       {
         "id": 234,
-        "scientificName": "Zosteropidae",
-        "commonName": "White-eyes, Yuhinas, and Allies",
+        "name": "Zosteropidae",
+        "description": "White-eyes, Yuhinas, and Allies",
         "orderId": 24
       }
     ];
@@ -1410,35 +1410,36 @@ angular.module('family').
     var autoIncrement = 235;
 
     var storage = $localForage.createInstance({
-      name: 'jfsBirdsApp', 
-      storename:'famillies'
+      name: 'famillies'
     });
 
-    if(storage.length() === 0)
-    {
-      // Add default values to database
-      for(var i = 0; i < famillies.length ; i++)
-      {
-        var family = famillies[i];
-        storage.setItem(family.id, 
+    storage.length().
+      then(function(data){
+        if(data===0){
+          // Add default values to database
+          for(var i = 0; i < famillies.length ; i++)
           {
-            scientificName : family.scientificName, 
-            commonName : family.commonName, 
-            orderId : family.orderId
-          }).
-          then(function(data) {
-            console.log(family.id + '(' + data.scientificName + ') family set in database');
-          }).catch(function(err) {
-            console.log(err);
-          });
-      }
-      storage.setItem('autoIncrement', autoIncrement).
-        then(function(data) {
-          console.log('AutoIncrement set at ' + data + ' in database');
-        }).catch(function(err) {
-          console.log(err);
-        });
-    }
+            var family = famillies[i];
+            storage.setItem(family.id, {
+                name : family.name, 
+                description : family.description, 
+                orderId : family.orderId
+              }).then(function(data) {
+                console.log(family.id + '(' + data.name + ') family set in database');
+              }).catch(function(err) {
+                console.log(err);
+              });
+          }
+          storage.setItem('autoIncrement', autoIncrement).
+            then(function(data) {
+              console.log('AutoIncrement set at ' + data + ' in database');
+            }).catch(function(err) {
+              console.log(err);
+            });
+        }
+      }).catch(function(err){
+        console.log(err);
+      });
 
     this.load = function(){return storage;};
 

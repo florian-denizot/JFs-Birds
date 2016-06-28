@@ -1,37 +1,42 @@
 angular.
   module('family').
   component('familyEdit', {
-    templateUrl: 'js/order/order-detail.template.html',
-    controller: function OrderEditController($location, $routeParams, orderStorage) {
-      var order = this;
-      var storage = orderStorage.load();
+    templateUrl: 'js/family/family-detail.template.html',
+    controller: function FamilyEditController($location, $routeParams, familyStorage) {
+      var family = this;
+      var storage = familyStorage.load();
       
-      order.id = $routeParams.orderId;
-      order.name = '';
+      family.id = $routeParams.familyId;
+      family.scientificName = '';
+      family.commonName = '';
       
-      storage.getItem(order.id).
+      storage.getItem(family.id).
         then(function(data){
-          order.name = data;
+          family.scientificName = data.scientificName;
+          family.commonName = data.commonName;
         }).catch(function(err){
           console.log(err);
         });
       
-      order.save = function (){
-        storage.setItem(order.id, order.name).
+      /*
+       * 
+       */
+      family.save = function (){
+        storage.setItem(family.id, family.name).
           then(function(data){
-            console.log('Order ' + order.name + ' saved in database');
-            $location.path('/orders');
+            console.log('Family ' + family.name + ' saved in database');
+            $location.path('/famillies');
           }).catch(function(err){
             console.log(err);
           });
       };
       
-      order.destroy = function ()
+      family.destroy = function ()
       {
-        storage.removeItem(order.id).
+        storage.removeItem(family.id).
           then(function(){
-            console.log('Order #' + order.id + ' remove from database');
-            $location.path('/orders');
+            console.log('Family #' + family.id + ' remove from database');
+            $location.path('/famillies');
           }).catch(function(err){
             console.log(err);
           });
@@ -40,32 +45,32 @@ angular.
   });
 
 angular.
-  module('order').  
-  component('orderNew', {
-    templateUrl: 'js/order/order-detail.template.html',
-    controller: function OrderNewController($location, orderStorage) {
-      var order = this;
-      var storage = orderStorage.load();
+  module('family').  
+  component('familyNew', {
+    templateUrl: 'js/family/family-detail.template.html',
+    controller: function FamilyNewController($location, familyStorage) {
+      var family = this;
+      var storage = familyStorage.load();
       
-      order.autoIncrement = 0;
+      family.autoIncrement = 0;
       
       storage.getItem('autoIncrement').
         then(function(data){
-          order.autoIncrement = data;
+          family.autoIncrement = data;
         }).catch(function(err){
           console.log(err);
         });
       
-      order.save = function (){
-        storage.setItem(order.autoIncrement, order.name).
+      family.save = function (){
+        storage.setItem(family.autoIncrement, family.name).
           then(function(data){
             
-            console.log('Order ' + order.name + ' added to database');
+            console.log('Family ' + family.name + ' added to database');
             
-            storage.setItem('autoIncrement', order.autoIncrement + 1).
+            storage.setItem('autoIncrement', family.autoIncrement + 1).
               then(function(data){
-                console.log('Order auto increment set to ' + data);
-                $location.path('/orders');
+                console.log('Family auto increment set to ' + data);
+                $location.path('/famillies');
               }).catch(function(err){
                 console.log(err);
               });

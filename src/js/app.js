@@ -1,5 +1,5 @@
-angular.module('jfsBirdsApp', ['ngRoute', 'LocalForageModule', 'birdList', 'order' ]).
-  controller('MainController', function($localForage) {
+angular.module('jfsBirdsApp', ['ngRoute', 'LocalForageModule', 'bird', 'order', 'family' ]).
+  controller('MainController', ['$localForage', function($localForage) {
     this.resetDatabase = function(){
       $localForage.clear().
         then(function(){
@@ -8,6 +8,6 @@ angular.module('jfsBirdsApp', ['ngRoute', 'LocalForageModule', 'birdList', 'orde
           console.log(err);
         });
       };
-    });
+    }]);
 
 

@@ -46,30 +46,34 @@ angular.module('order').
     var autoIncrement = 41;
 
     var storage = $localForage.createInstance({
-      name: 'jfsBirdsApp', 
-      storename:'orders'
+      name: 'orders'
     });
 
-    if(storage.length() === 0)
-    {
-      // Add default values to database
-      for(var i = 0; i < orders.length ; i++)
-      {
-        var order = orders[i];
-        storage.setItem(order.id, order.name).
-          then(function(data) {
-            console.log(order.id + '(' + data + ') order set in database');
-          }).catch(function(err) {
-            console.log(err);
-          });
-      }
-      storage.setItem('autoIncrement', autoIncrement).
-        then(function(data) {
-          console.log('AutoIncrement set at ' + data + ' in database');
-        }).catch(function(err) {
-          console.log(err);
-        });
-    }
+    
+    storage.length().
+      then(function(data){
+        if(data===0){
+          // Add default values to database
+          for(var i = 0; i < orders.length ; i++)
+          {
+            var order = orders[i];
+            storage.setItem(order.id, order.name).
+              then(function(data) {
+                console.log(data + ' order set in database');
+              }).catch(function(err) {
+                console.log(err);
+              });
+          }
+          storage.setItem('autoIncrement', autoIncrement).
+            then(function(data) {
+              console.log('AutoIncrement set at ' + data + ' in database');
+            }).catch(function(err) {
+              console.log(err);
+            });
+        }
+      }).catch(function(err){
+        console.log(err);
+      });
 
     this.load = function(){return storage;};
 
