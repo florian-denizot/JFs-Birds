@@ -4,10 +4,12 @@
   <input type="text" class="form-control" ng-model="$ctrl.search" id="order_search" placeholder="Search">
 </fieldset>
 
-<table class="table" >
+<table class="table">
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Scientifique Name</th>
+      <th>Common name</th>
+      <th>Order</th>
       <th class="text-right">
         <a href="#!/orders/new">
           <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
@@ -16,10 +18,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="order in $ctrl.list | filter:$ctrl.search">
-      <td>{{order.name}}</td>
+    <tr ng-repeat="family in $ctrl.list | filter:$ctrl.search">
+      <td>{{family.scientificName}}</td>
+      <td>{{family.commonName}}</td>
+      <td>{{family.order}}</td>
       <td class="text-right">
-        <a href="#!/orders/edit/{{order.id}}" title="Edit the {{order.name}} order">
+        <a href="#!/famillies/edit/{{family.id}}" title="Edit the {{family.scientificName}} family">
           <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
         </a>
       </td>

@@ -24,8 +24,14 @@ angular.
           template: '<order-new></order-new>'
         }).
         when('/famillies', {
-          template: '<familly-list></familly-list>'
+          template: '<family-list></family-list>'
         }).
+        when('/famillies/edit/:familyId', {
+          template: '<family-edit></family-edit>'
+        }).
+        when('/famillies/new', {
+          template: '<family-new></family-new>'
+        }).        
         when('/behaviors', {
           template: '<behavior-list></behavior-list>'
         }).

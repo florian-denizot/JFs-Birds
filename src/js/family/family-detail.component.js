@@ -1,6 +1,6 @@
 angular.
-  module('order').
-  component('orderEdit', {
+  module('family').
+  component('familyEdit', {
     templateUrl: 'js/order/order-detail.template.html',
     controller: function OrderEditController($location, $routeParams, orderStorage) {
       var order = this;
