@@ -28,7 +28,8 @@ function BirdListController(birdStorage, familyStorage, orderStorage) {
       if(key !== 'autoIncrement') {
         birdList.famillies.push({
           id : key, 
-          name : value.name
+          name : value.name,
+          orderId : value.orderId
         });
       }
     }).then(function() {

@@ -14,7 +14,7 @@
     <div class="col-sm-4">
       <select class="form-control" ng-model="searchFamily.familyId">
         <option value="">- Filter by family</option>
-        <option ng-repeat="family in $ctrl.famillies | orderBy:'name'" value="{{family.id}}">{{family.name}}</option>
+        <option ng-repeat="family in $ctrl.famillies | filter:searchOrder:$ctrl.idComparator | orderBy:'name'" value="{{family.id}}">{{family.name}}</option>
       </select>
     </div>
   </div>
