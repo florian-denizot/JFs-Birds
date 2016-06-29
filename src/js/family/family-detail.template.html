@@ -1,15 +1,20 @@
-<h1>New/Edit Order</h1>
+<h1><span ng-hide="$ctrl.id">New</span><span ng-show="$ctrl.id">Edit</span> Order</h1>
 
 <form name="familyForm">
 
   <div class="form-group">
     <label for="name" class="control-label">Name</label>
-    <input type="text" class="form-control" id="name" ng-model="$ctrl.scientificName" required>
+    <input type="text" class="form-control" id="name" ng-model="$ctrl.name" required>
   </div>
   <div class="form-group">
-    <label for="name" class="control-label">Description</label>
-    <input type="text" class="form-control" id="name" ng-model="$ctrl.commonName" required>
+    <label for="description" class="control-label">Description</label>
+    <input type="text" class="form-control" id="description" ng-model="$ctrl.description" required>
   </div>
+  <div class="form-group">
+    <label for="order" class="control-label">Order</label>
+    <select class="form-control" id="order" ng-model="$ctrl.orderId" ng-options="order as order.name for order in $ctrl.orders track by order.id" required></select>
+  </div>
+  
   
   <br>
   <a href="#!/famillies" class="btn btn-default">Cancel</a>

@@ -7,7 +7,7 @@
     </div>
     <div class="col-sm-6">
       <select class="form-control" ng-model="searchOrder.orderId">
-        <option value="">- Select an order</option>
+        <option value="">- Filter by order</option>
         <option ng-repeat="orderItem in $ctrl.orders | orderBy:'name'" value="{{orderItem.id}}">{{orderItem.name}}</option>
       </select>
     </div>

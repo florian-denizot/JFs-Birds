@@ -2,29 +2,61 @@ angular.
   module('family').
   component('familyEdit', {
     templateUrl: 'js/family/family-detail.template.html',
-    controller: function FamilyEditController($location, $routeParams, familyStorage) {
+    controller: function FamilyEditController($location, $routeParams, familyStorage, orderStorage) {
       var family = this;
-      var storage = familyStorage.load();
+      var familyDb = familyStorage.load();
+      var orderDb = orderStorage.load();
       
       family.id = $routeParams.familyId;
-      family.scientificName = '';
-      family.commonName = '';
+      family.name;
+      family.description;
+      family.orderId;
+      family.selectedOrder;
       
-      storage.getItem(family.id).
+      familyDb.getItem(family.id).
         then(function(data){
-          family.scientificName = data.scientificName;
-          family.commonName = data.commonName;
+          family.name = data.name;
+          family.description = data.description;
+          family.selectedOrder = data.orderId;
+          
+          orderDb.getItem(family.selectedOrder).
+            then(function(data){
+              family.orderId = {
+                id : family.selectedOrder, 
+                name : data
+              };
+            }).catch(function(err){
+              console.log(err);
+            });
+            
         }).catch(function(err){
           console.log(err);
         });
+        
+      family.orders = [];
       
-      /*
-       * 
-       */
+      // Load Orders from database to fill up the filter listbox
+      orderDb.iterate(function(value, key) {
+          if(key !== 'autoIncrement') {
+            family.orders.push({
+              id : key, 
+              name : value
+            });
+          }
+        }).then(function() {
+          console.log('Orders loaded from database');
+        }).catch(function(err) {
+          console.log(err);
+        });
+      
       family.save = function (){
-        storage.setItem(family.id, family.name).
+        familyDb.setItem(family.id, {
+            name: family.name, 
+            description : family.description, 
+            orderId: family.orderId.id
+          }).
           then(function(data){
-            console.log('Family ' + family.name + ' saved in database');
+            console.log('Family ' + data.name + ' saved in database');
             $location.path('/famillies');
           }).catch(function(err){
             console.log(err);
@@ -33,7 +65,7 @@ angular.
       
       family.destroy = function ()
       {
-        storage.removeItem(family.id).
+        familyDb.removeItem(family.id).
           then(function(){
             console.log('Family #' + family.id + ' remove from database');
             $location.path('/famillies');
@@ -48,26 +80,47 @@ angular.
   module('family').  
   component('familyNew', {
     templateUrl: 'js/family/family-detail.template.html',
-    controller: function FamilyNewController($location, familyStorage) {
+    controller: function FamilyNewController($location, familyStorage, orderStorage) {
       var family = this;
-      var storage = familyStorage.load();
+      var familyDb = familyStorage.load();
+      var orderDb = orderStorage.load();
       
       family.autoIncrement = 0;
       
-      storage.getItem('autoIncrement').
+      familyDb.getItem('autoIncrement').
         then(function(data){
           family.autoIncrement = data;
         }).catch(function(err){
           console.log(err);
         });
+        
+      family.orders = [];
+      
+      // Load Orders from database to fill up the filter listbox
+      orderDb.iterate(function(value, key) {
+          if(key !== 'autoIncrement') {
+            family.orders.push({
+              id : key, 
+              name : value
+            });
+          }
+        }).then(function() {
+          console.log('Orders loaded from database');
+        }).catch(function(err) {
+          console.log(err);
+        });
       
       family.save = function (){
-        storage.setItem(family.autoIncrement, family.name).
+        familyDb.setItem(family.autoIncrement, {
+            name: family.name, 
+            description : family.description, 
+            orderId: family.orderId.id
+          }).
           then(function(data){
             
-            console.log('Family ' + family.name + ' added to database');
+            console.log('Family ' + data.name + ' added to database');
             
-            storage.setItem('autoIncrement', family.autoIncrement + 1).
+            familyDb.setItem('autoIncrement', family.autoIncrement + 1).
               then(function(data){
                 console.log('Family auto increment set to ' + data);
                 $location.path('/famillies');
