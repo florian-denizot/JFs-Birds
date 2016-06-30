@@ -38,7 +38,7 @@ angular.module('jfsBirdsApp').
       $q.all(initTasks).
         then(function(){
           $scope.init = false;
-          $location.path('/birds');
+          $location.path('/');
         }).catch(function(err){
           console.log(err);
         });
