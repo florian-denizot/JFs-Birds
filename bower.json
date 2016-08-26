@@ -6,10 +6,10 @@
     "**/*.txt"
   ],
   "dependencies": {
-    "angular": "~1.5.0",
-    "angular-route": "~1.5.0",
+    "angular": null,
+    "angular-route": null,
     "bootstrap": "~3.3.6",
-    "angular-localforage":null,
+    "angular-indexed-db":null,
     "angular-utils-pagination": null
   },
   "devDependencies": {
