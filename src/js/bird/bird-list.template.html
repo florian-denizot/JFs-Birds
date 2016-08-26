@@ -35,7 +35,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr dir-paginate="bird in $ctrl.list | filter:searchText | filter:searchOrder:$ctrl.idComparator | filter:searchFamily:$ctrl.idComparator | orderBy:'englishName' | itemsPerPage: 20">
+    <tr dir-paginate="bird in $ctrl.list | filter:searchText | filter:searchOrder:$ctrl.idComparator | filter:searchFamily:$ctrl.idComparator | orderBy:'englishName' | itemsPerPage: 15">
       <td>{{bird.englishName}}</td>
       <td>{{bird.scientificName}}</td>
       <td>{{bird.orderName}}</td>
