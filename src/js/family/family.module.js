@@ -1,3 +1,3 @@
-angular.module('family', ['ngRoute', 'LocalForageModule', 'order']);
+angular.module('family', ['ngRoute', 'indexedDB', 'order']);
 
 

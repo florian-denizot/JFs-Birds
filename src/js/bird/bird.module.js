@@ -1,1 +1,1 @@
-angular.module('bird', ['ngRoute', 'LocalForageModule', 'order', 'family', 'angularUtils.directives.dirPagination']);
+angular.module('bird', ['ngRoute', 'indexedDB', 'order', 'family', 'angularUtils.directives.dirPagination']);

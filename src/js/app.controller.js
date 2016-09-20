@@ -1,7 +1,7 @@
 angular.module('jfsBirdsApp').
   controller('MainController',  ['$scope', '$location', '$q', 
-    'orderStorage', 'familyStorage', 'birdStorage', 
-    function($scope, $location, $q, orderStorage, familyStorage, birdStorage) { 
+    'orderStorage'/*, 'familyStorage', 'birdStorage'*/, 
+    function($scope, $location, $q, orderStorage/*, familyStorage, birdStorage*/) { 
     
     $scope.tasks = [];    
     
@@ -12,6 +12,8 @@ angular.module('jfsBirdsApp').
       $scope.tasks[1] = {text : "Initializing Family storage", done : false};
       $scope.tasks[2] = {text : "Initializing Bird storage (Can take a while the first time)", done : false};
       
+      
+      
       var initOrders = orderStorage.init().
         then(function(message){
           $scope.tasks[0] = {text : message, done : true};
@@ -19,7 +21,7 @@ angular.module('jfsBirdsApp').
           console.log(err);
         });
 
-      var initFamillies = familyStorage.init().
+      /*var initFamillies = familyStorage.init().
         then(function(message){
           $scope.tasks[1] = {text : message, done : true};
         }).catch(function(err){
@@ -31,14 +33,15 @@ angular.module('jfsBirdsApp').
           $scope.tasks[2] = {text : message, done : true};
         }).catch(function(err){
           console.log(err);
-        });
+        });*/
 
-      var initTasks = [initOrders, initFamillies, initBirds];
+      var initTasks = [initOrders/*, initFamillies, initBirds*/];
       
       $q.all(initTasks).
         then(function(){
-          $scope.init = false;
-          $location.path('/');
+          console.log("All done");
+          //$scope.init = false;
+          //$location.path('/');
         }).catch(function(err){
           console.log(err);
         });

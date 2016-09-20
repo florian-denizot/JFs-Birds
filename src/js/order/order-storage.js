@@ -1,9 +1,5 @@
 angular.module('order').
-  service('orderStorage', ['$localForage', '$q', function($localForage, $q){
-    
-    var storage = $localForage.createInstance({
-      name: 'orders'
-    });
+  service('orderStorage', ['$indexedDB', '$q', function($indexedDB, $q){
     
     var setDefaultValues = function(){
       var orders = [
@@ -164,33 +160,34 @@ angular.module('order').
           "name": "Trogoniformes"
         }
       ];
-      var autoIncrement = 40;
+     
       var dbInsertions = [];
-      var order;
       var dbInsertion;
       
-      for(var i = 0; i < orders.length ; i++)
-      {
-        order = orders[i];
-        dbInsertion = storage.setItem(order.id, order.name).
-          then(function(data) {
-            console.log(data + ' order set in database');
-          }).catch(function(err) {
-            console.log(err);
-          });
-        
-        dbInsertions.push(dbInsertion);
- 
-      }
-      dbInsertion = storage.setItem('autoIncrement', autoIncrement).
-        then(function(data) {
-          console.log('Order auto increment set at ' + data + ' in database');
+      dbInsertion = $indexedDB.openStore('orders', function(store){
+        store.insert(orders).then(function(e){
+          return "Inserted 39 values in Order database";
         }).catch(function(err) {
           console.log(err);
         });
+      }).then(function(message){
+        return message;
+      });
+      dbInsertions.push(dbInsertion)
       
-      dbInsertions.push(dbInsertion); 
-        
+      autoincrement = [{'storeName':'orders', 'value':40}];
+      dbInsertion = $indexedDB.openStore('autoincrement', function(store){
+         store.insert(autoincrement).
+          then(function(e){
+            return "Order autoincrement set to 40";
+          }).catch(function(err) {
+            console.log(err);
+          });
+      }).then(function(message){
+        return message;
+      });
+      dbInsertions.push(dbInsertion);
+      
       return $q.all(dbInsertions).
         then(function(){
           return "Default values set in Order database";
@@ -200,24 +197,40 @@ angular.module('order').
     };
     
     this.init = function(){
-      return storage.length().
-        then(function(data){
-          if(data===0){
+      return $indexedDB.openStore('autoincrement', function(autoincrement){
+        autoincrement.getAllKeys().then(function(keys){
+          if(keys.indexOf('orders') == -1)
+          {
             return setDefaultValues().
               then(function(message){
                 return message;
               }).catch(function(err){
                 console.log(err);
               });
-          } else {
-            return "Database of Orders already exist";
+          }
+          else
+          {
+            return "Order database already exist";
           }
         }).catch(function(err){
           console.log(err);
         });
+      }).then(function(message){
+        return message;
+      });
     };
 
-    this.load = function(){return storage;};
+    this.load = function(){
+      return $indexedDB.openStore('orders', function(store){
+        store.getAll().then(function(data) {  
+          return data;
+        }).catch(function(err){
+          console.log(err);
+        });
+      }).then(function(data) {  
+          return data;
+        });
+    };
 
   }]);
 

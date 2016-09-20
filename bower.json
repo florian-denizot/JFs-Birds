@@ -10,7 +10,7 @@
     "angular-route": null,
     "bootstrap": "~3.3.6",
     "angular-indexed-db":null,
-    "angular-utils-pagination": null
+    "angular-utils-pagination": null,
   },
   "devDependencies": {
     

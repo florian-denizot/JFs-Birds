@@ -1,2 +1,2 @@
-angular.module('jfsBirdsApp', ['ngRoute', 'LocalForageModule', 'bird', 'order', 'family' ]);
+angular.module('jfsBirdsApp', ['ngRoute', 'indexedDB', /*'bird', */'order'/*, 'family' */]);
 

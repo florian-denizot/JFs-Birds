@@ -1,7 +1,7 @@
 angular.
   module('jfsBirdsApp').
-  config(['$locationProvider', '$routeProvider',
-    function config($locationProvider, $routeProvider) {
+  config(['$locationProvider', '$routeProvider', '$indexedDBProvider',
+    function config($locationProvider, $routeProvider, $indexedDBProvider) {
       $locationProvider.hashPrefix('!');
 
       $routeProvider.
@@ -26,15 +26,31 @@ angular.
         when('/famillies', {
           template: '<family-list></family-list>'
         }).
-        when('/famillies/edit/:familyId', {
+        when('/families/edit/:familyId', {
           template: '<family-edit></family-edit>'
         }).
-        when('/famillies/new', {
+        when('/families/new', {
           template: '<family-new></family-new>'
         }).        
         when('/behaviors', {
           template: '<behavior-list></behavior-list>'
         }).
-        otherwise('/birds');
+        otherwise('/orders');
+
+
+        $indexedDBProvider
+          .connection('jfBirdsDB')
+          .upgradeDatabase(1, function(event, db, tx){
+            db.createObjectStore('autoincrement', {keyPath: 'storeName'});
+            db.createObjectStore('orders', {keyPath: 'id'});
+            db.createObjectStore('behaviors', {keyPath: 'id'});
+                    
+            var familyObjStore = db.createObjectStore('families', {keyPath: 'id'});
+            familyObjStore.createIndex('order_idx', 'orderId', {unique: false});
+            
+            var birdObjStore = db.createObjectStore('birds', {keyPath: 'id'});
+            birdObjStore.createIndex('family_idx', 'familyId', {unique: false});
+
+          });
     }    
   ]);

@@ -1,9 +1,5 @@
 angular.module('bird').
-  service('birdStorage', ['$localForage', '$q', function($localForage, $q){
-    
-    var storage = $localForage.createInstance({
-      name: 'birds'
-    });
+  service('birdStorage', ['$indexedDB', '$q', function($indexedDB, $q){
      
     var setDefaultValues = function(){
       var birds = [

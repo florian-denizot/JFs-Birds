@@ -1,12 +1,8 @@
 angular.module('family').
-  service('familyStorage', ['$localForage', '$q', function($localForage, $q){
-    
-    var storage = $localForage.createInstance({
-      name: 'famillies'
-    });
+  service('familyStorage', ['$indexedDB', '$q', function($indexedDB, $q){
     
     var setDefaultValues = function(){
-      var famillies = [
+      var families = [
         {
           "id": 1,
           "name": "Acanthisittidae",
@@ -1412,37 +1408,31 @@ angular.module('family').
           "orderId": 24
         }
       ];
-
-      var autoIncrement = 235;
-      var dbInsertions = [];
-      var family;
-      var dbInsertion;
       
-      for(var i = 0; i < famillies.length ; i++)
-      {
-        family = famillies[i];
-        dbInsertion = storage.setItem(family.id, {
-          name : family.name,
-          description : family.description,
-          orderId : family.orderId
-          }).then(function(data) {
-            console.log(data.name + ' family set in database');
-          }).catch(function(err) {
-            console.log(err);
-          });
-        
-        dbInsertions.push(dbInsertion);
- 
-      }
-      dbInsertion = storage.setItem('autoIncrement', autoIncrement).
-        then(function(data) {
-          console.log('Family auto increment set at ' + data + ' in database');
+      var dbInsertions = [];
+      var dbInsertion;
+
+      $indexedDB.openStore('families', function(store){
+        dbInsertion = store.insert(families).then(function(e){
+          return "Inserted 234 values in Family database";
         }).catch(function(err) {
           console.log(err);
         });
+        dbInsertions.push(dbInsertion);
+      });
       
-      dbInsertions.push(dbInsertion); 
-        
+      autoincrement = [{'storeName':'families', 'value':235}];
+      $indexedDB.openStore('autoincrement', function(store){
+        dbInsertion = store.insert(autoincrement).
+          then(function(e){
+            return "Family autoincrement set to 235";
+          }).catch(function(err) {
+            console.log(err);
+          });
+          
+        dbInsertions.push(dbInsertion);
+      });
+      
       return $q.all(dbInsertions).
         then(function(){
           return "Default values set in Family database";
@@ -1452,23 +1442,34 @@ angular.module('family').
     };
     
     this.init = function(){
-      return storage.length().
-        then(function(data){
-          if(data===0){
-            return setDefaultValues().
-              then(function(message){
-                return message;
-              }).catch(function(err){
-                console.log(err);
-              });
-          } else {
-            return "Database of Famillies already exist";
-          }
-        }).catch(function(err){
-          console.log(err);
-        });
+      
+      $indexedDB.openStore('autoincrement', function(autoincrement){
+        autoincrement.find('families')
+          .then(function(data){
+            if(!data){
+              return setDefaultValues().
+                then(function(message){
+                  return message;
+                }).catch(function(err){
+                  console.log(err);
+                });
+            }
+            else
+            {
+              return "Family database already exist";
+            }
+          }).catch(function(err){
+            console.log(err);
+          });
+      });
     };
 
-    this.load = function(){return storage;};
+    this.load = $indexedDB.openStore('families', function(store){
+      store.getAll().then(function(values) {  
+        return values;
+      }).catch(function(err){
+        console.log(err);
+      });
+    });
   }]);
 
